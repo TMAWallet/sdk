@@ -1,0 +1,10 @@
+/node_modules
+/.vscode
+.DS_Store
+/lib
+/dist
+/cache
+/local-toolkit/database
+.env
+.env.remote
+.env.local
