@@ -4,7 +4,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.2.15",
+	"version": "1.2.16",
 	"description": "TMA Wallet SDK",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
