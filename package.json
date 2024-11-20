@@ -12,14 +12,26 @@
 	"files": [
 		"dist/*"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TMAWallet/sdk.git"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "rimraf ./dist && tsc",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint \"src/**/*.ts\" --fix"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"wallet",
+		"ethers",
+		"ethers.js",
+		"telegram",
+		"telegram-mini-app",
+		"ethereum",
+		"solana"
+	],
+	"author": "TMA Wallet",
 	"license": "ISC",
 	"dependencies": {
 		"@twa-dev/sdk": "^7.10.1",
@@ -28,10 +40,6 @@
 		"ethers": "^6.13.4"
 	},
 	"devDependencies": {
-		"eslint": "8.44.0",
-		"eslint-config-prettier": "8.8.0",
-		"eslint-plugin-jsdoc": "39.6.8",
-		"eslint-plugin-prefer-arrow": "1.2.3",
 		"prettier": "2.8.8",
 		"rimraf": "5.0.1",
 		"typescript": "5.6.3"
