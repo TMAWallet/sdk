@@ -4,7 +4,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"version": "1.2.16",
+	"version": "1.3.7",
 	"description": "TMA Wallet SDK",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -34,14 +34,15 @@
 	"author": "TMA Wallet",
 	"license": "ISC",
 	"dependencies": {
-		"@twa-dev/sdk": "^7.10.1",
-		"@ylide/sdk": "0.9.0-beta.8",
-		"@ylide/smart-buffer": "0.0.17",
-		"ethers": "^6.13.4"
+		"@ethersproject/experimental": "^5.7.0",
+		"@twa-dev/sdk": "^8.0.1",
+		"eip1193-types": "^0.2.2",
+		"ethers": "^6.13.4",
+		"eventemitter3": "^5.0.1"
 	},
 	"devDependencies": {
 		"prettier": "2.8.8",
 		"rimraf": "5.0.1",
-		"typescript": "5.6.3"
+		"typescript": "5.7.2"
 	}
 }

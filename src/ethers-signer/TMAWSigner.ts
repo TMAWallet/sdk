@@ -12,6 +12,7 @@ import {
 	TransactionLike,
 	TypedDataEncoder,
 } from 'ethers';
+
 import type { TMAWalletClient } from '../TMAWallet.Client';
 
 export class TMAWalletSigner extends ethers.AbstractSigner {
@@ -26,8 +27,8 @@ export class TMAWalletSigner extends ethers.AbstractSigner {
 		return address;
 	}
 
-	connect(provider: null | ethers.Provider): TMAWalletSigner {
-		return this;
+	connect(_provider: null | ethers.Provider): TMAWalletSigner {
+		return new TMAWalletSigner(this.client, _provider);
 	}
 
 	async signTransaction(tx: ethers.TransactionRequest): Promise<string> {

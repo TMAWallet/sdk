@@ -1,6 +1,8 @@
-import { randomBytes } from '@ylide/sdk';
-import { SmartBuffer } from '@ylide/smart-buffer';
 import { AbstractStorage } from '../storage/AbstractStorage';
+
+import { randomBytes } from '../utils/randomBytes';
+import { hexToUint8Array } from '../utils/hexToUint8Array';
+import { uint8ArrayToHex } from '../utils/uint8ArrayToHex';
 
 export interface IClientBundle {
 	timestamp: number;
@@ -39,8 +41,8 @@ export class ClientBundleController {
 		}
 		return {
 			timestamp,
-			clientPublicKey: SmartBuffer.ofHexString(tmaw_client_public_key).bytes,
-			clientSecretKey: SmartBuffer.ofHexString(tmaw_client_secret_key).bytes,
+			clientPublicKey: hexToUint8Array(tmaw_client_public_key),
+			clientSecretKey: hexToUint8Array(tmaw_client_secret_key),
 		};
 	}
 
@@ -48,8 +50,8 @@ export class ClientBundleController {
 		const clientPublicKey = randomBytes(32);
 		const clientSecretKey = randomBytes(32);
 
-		const clientPublicKeyHex = new SmartBuffer(clientPublicKey).toHexString();
-		const clientSecretKeyHex = new SmartBuffer(clientSecretKey).toHexString();
+		const clientPublicKeyHex = uint8ArrayToHex(clientPublicKey);
+		const clientSecretKeyHex = uint8ArrayToHex(clientSecretKey);
 
 		const timestamp = Date.now();
 
